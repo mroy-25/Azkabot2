@@ -54,14 +54,18 @@ const ownerNumber = ["6281215524272@s.whatsapp.net","6281215524272@s.whatsapp.ne
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
-const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))                const _registered = JSON.parse(fs.readFileSync('./database/bot/registered.json'))
-const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))                const nsfw = JSON.parse(fs.readFileSync('./database/bot/nsfw.json'))
+const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))            
+const _registered = JSON.parse(fs.readFileSync('./database/bot/registered.json'))
+const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))             
+const nsfw = JSON.parse(fs.readFileSync('./database/bot/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./database/bot/simi.json'))
 const event = JSON.parse(fs.readFileSync('./database/bot/event.json'))
-const _limit = JSON.parse(fs.readFileSync('./database/user/limit.json'))                const uang = JSON.parse(fs.readFileSync('./database/user/uang.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/user/limit.json'))             
+const uang = JSON.parse(fs.readFileSync('./database/user/uang.json'))
 /*********** END LOAD ***********/
 
-/********** FUNCTION ***************/                                                   const getLevelingXp = (sender) => {
+/********** FUNCTION ***************/                                                
+const getLevelingXp = (sender) => {
             let position = false
             Object.keys(_level).forEach((i) => {
                 if (_level[i].id === sender) {
@@ -69,7 +73,8 @@ const _limit = JSON.parse(fs.readFileSync('./database/user/limit.json'))        
                 }
             })
             if (position !== false) {
-                return _level[position].xp                                                          }
+                return _level[position].xp                                        
+	    }
         }
 
         const getLevelingLevel = (sender) => {
