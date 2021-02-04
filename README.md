@@ -7,7 +7,7 @@
 ## Clone this project
 
 ```bash
-> git clone https://github.com/affisjunianto/botwasapv4
+> git clone https://github.com/mroy-25/Azkabot
 ```
 
 ## Install the dependencies:
@@ -15,7 +15,7 @@ Before running the below command, make sure you're in the project directory that
 you've just cloned!!
 
 ```bash
-> cd botwasapv4
+> cd Azkabot
 > bash install.sh
 ```
 
@@ -129,8 +129,8 @@ you've just cloned!!
 
 
 ## whatsapp number
-* [`WhatsApp`](wa.me/6282334297175)
+* [`WhatsApp`](wa.me/62881215524272)
 ### Donate
 * [`Saweria`](https://saweria.co/ampibibot)
-* [`Dana : +62895710073737`]
-* [`Pulsa : +6282334297175`]
+* [`Ovo : +6281215524272`]
+* [`Pulsa : +6281215524272`]
