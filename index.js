@@ -1609,7 +1609,9 @@ client.on('group-participants-update', async (anu) => {
                                         teks += `  Total : ${groupMembers.length}\n`
                                         for (let mem of groupMembers) {
                                                 teks += `╠➥ ${mem.jid.split('@')[0]}\n`
-                                                members_id.push(mem.jid)                                                                                                                       }                                                                                                                                                      client.sendMessage(from, '╔══✪〘 TAG SEMUA MEMBER 〙✪══\n╠➥'+teks+'╚═〘 *AZKABOT* 〙', text, {quoted: mek})
+                                                members_id.push(mem.jid)                                                                                                            
+					}                                                                                                                                                    
+					client.sendMessage(from, '╔══✪〘 TAG SEMUA MEMBER 〙✪══\n╠➥'+teks+'╚═〘 *AZKABOT* 〙', text, {quoted: mek})
                                         await limitAdd(sender)
                      break
                 case 'tagall3':
@@ -1685,8 +1687,10 @@ client.on('group-participants-update', async (anu) => {
                                         if (!isGroup) return reply(ind.groupo())
                                         if (!isOwner) return reply(ind.ownerb())
                                         members_id = []
-                                        teks = (args.length > 1) ? body.slice(8).trim() : ''                                                                                                   teks += `  Total : ${groupMembers.length}\n`
-                                        for (let mem of groupMembers) {                                                                                                                                teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
+                                        teks = (args.length > 1) ? body.slice(8).trim() : ''                                                                                                   
+					teks += `  Total : ${groupMembers.length}\n`
+                                        for (let mem of groupMembers) {                                                                                                                                
+						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
                                                 members_id.push(mem.jid)
                                         }
                         client.sendMessage(from, '╔══✪〘 TAG SEMUA MEMBER 〙✪══\n╠➥'+teks+'╚═〘 *AZKABOT* 〙', text, {detectLinks: false, quoted: mek})
