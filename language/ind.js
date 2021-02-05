@@ -198,7 +198,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}ytmp4* <link>
 ┣⊱ *${prefix}play* <judul>
 ┣⊱ *${prefix}joox* <judul>
-┣⊱ *${prefix}toaudio <reply/tag video>
+┣⊱ *${prefix}toaudio* <reply/tag video>
 ┃
 ┣━━⊱  *ANIME MENU (NSFW)*  ⊰━┫
 ┃
