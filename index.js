@@ -561,7 +561,7 @@ client.on('group-participants-update', async (anu) => {
            if (isLimit(sender)) return reply(ind.limitend(pusname))
            if (!isGroup) return reply(ind.groupo())
            hasil = await getBuffer(data.url)
-           client.sendMessage(from, hasil, image, {quoted: mek, caption: '*CINTAI WAIFUMU*'})
+           client.sendMessage(from, hasil, image, {quoted: mek, caption: '*INI WAIFUMU SENPAI*'})
            await limitAdd(sender)
            break
            case 'neko':
@@ -754,7 +754,7 @@ client.on('group-participants-update', async (anu) => {
                 const jumblah = q.substring(q.lastIndexOf('|') + 1)
                 if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
                 const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
-                fee = 0.005 *  jumblah
+                fee = 0.05 *  jumblah
                 hasiltf = jumblah - fee
                 addKoinUser(tujuantf, hasiltf)
                 confirmATM(sender, jumblah)
@@ -898,7 +898,7 @@ client.on('group-participants-update', async (anu) => {
 				    try {
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/husbu?apikey=BotWeA`)
 						buffer = await getBuffer(res.image)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Cintai husbumu'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'INI HUSBUMU SENPAI'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
@@ -913,7 +913,7 @@ client.on('group-participants-update', async (anu) => {
 					reply(ind.wait())
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'RANDOM ANIME'})
 					await limitAdd(sender)
 					break
                 case 'joox':
@@ -1135,8 +1135,8 @@ client.on('group-participants-update', async (anu) => {
                 const namaUser = q.substring(0, q.indexOf('|') - 0)
                 const umurUser = q.substring(q.lastIndexOf('|') + 1)
                 const serialUser = createSerial(20)
-                if (namaUser.length >= 30) return reply(`why is your name so long it's a name or a train`)
-                if (umurUser.length >= 3, umurUser.length <= 1) return reply(`your age is too young / old minimum age 10 years and maximum 40 years`)
+                if (namaUser.length >= 30) return reply(`NAMAMU PANJANG SEKALI SENPAI. TOLONG DAFTAR KEMBALI`)
+                if (umurUser.length >= 3, umurUser.length <= 1) return reply(`UMURMU TERLALU MUDA. UMUR MINIMUM UNTUK MENGGUNAKAN BOT ADALAH 10 TAHUN`)
                 veri = sender
                 if (isGroup) {
                     addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
@@ -1152,10 +1152,74 @@ client.on('group-participants-update', async (anu) => {
                     console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'))
                 }
 					break
+		case 'nguli':
+                      if (!isRegistered) return reply(ind.noregis())
+                      if (isLimit(sender)) return reply(ind.limitend(pushname))
+                      if (!isEventon) return reply(`maaf senpai ${pushname} event nguli tidak di aktifkan oleh admin/owner`)
+                      if (isOwner) {
+                      const one = 9999999
+                      addLevelingXp(sender, one)
+                      addLevelingLevel(sender, 99)
+                      reply(`karena anda owner. kami dari team bot mengirim ${one}Xp untuk anda dari hasil nguli`)
+                      }else{
+                      const mining = Math.ceil(Math.random() * 10000)
+                      addLevelingXp(sender, mining)
+                      await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp* dari hasil nguli. semangat nguli yaa senpai`)
+                      }
+                    await limitAdd(sender)
+					break
+				case 'maling':
+                      if (!isRegistered) return reply(ind.noregis())
+                      if (isLimit(sender)) return reply(ind.limitend(pushname))
+                      if (!isEventon) return reply(`maaf senpai ${pushname} event maling tidak di aktifkan oleh admin/owner`)
+                      if (isOwner) {
+                      const one = 9999999
+                      addLevelingXp(sender, one)
+                      addLevelingLevel(sender, 99)
+                      reply(`karena anda owner. kami dari team bot mengirim ${one}Xp untuk anda dari hasil maling`)
+                      }else{
+                      const mining = Math.ceil(Math.random() * 10000)
+                      addLevelingXp(sender, mining)
+                      await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp* dari hasil maling. semangat maling yaa senpai`)
+                      }
+                    await limitAdd(sender)
+					break
+				case 'begal':
+                      if (!isRegistered) return reply(ind.noregis())
+                      if (isLimit(sender)) return reply(ind.limitend(pushname))
+                      if (!isEventon) return reply(`maaf senpai ${pushname} event begal tidak di aktifkan oleh admin/owner`)
+                      if (isOwner) {
+                      const one = 9999999
+                      addLevelingXp(sender, one)
+                      addLevelingLevel(sender, 99)
+                      reply(`karena anda owner. kami dari team bot mengirim ${one}Xp untuk anda dari hasil begal`)
+                      }else{
+                      const mining = Math.ceil(Math.random() * 10000)
+                      addLevelingXp(sender, mining)
+                      await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp* dari hasil begal. semangat begal yaa senpai`)
+                      }
+                    await limitAdd(sender)
+					break
+				case 'korupsi':
+                      if (!isRegistered) return reply(ind.noregis())
+                      if (isLimit(sender)) return reply(ind.limitend(pushname))
+                      if (!isEventon) return reply(`maaf senpai ${pushname} event korupsi tidak di aktifkan oleh admin/owner`)
+                      if (isOwner) {
+                      const one = 9999999
+                      addLevelingXp(sender, one)
+                      addLevelingLevel(sender, 99)
+                      reply(`karena anda owner. kami dari team bot mengirim ${one}Xp untuk anda dari hasil korupsi`)
+                      }else{
+                      const mining = Math.ceil(Math.random() * 10000)
+                      addLevelingXp(sender, mining)
+                      await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp* dari hasil korupsi. semangat korupsi yaa senpai`)
+                      }
+                    await limitAdd(sender)
+					break			
             	case 'mining':
                       if (!isRegistered) return reply(ind.noregis())
                       if (isLimit(sender)) return reply(ind.limitend(pushname))
-                      if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh owner`)
+                      if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh admin/owner`)
                       if (isOwner) {
                       const one = 999999999
                       addLevelingXp(sender, one)
@@ -2161,7 +2225,7 @@ client.on('group-participants-update', async (anu) => {
 				default:
 			if (body.startsWith(`${prefix}${command}`)) {
 
-                  reply(`Maaf *${pushname}*, Command *${prefix}${command}* Tidak Terdaftar Di Dalam *${prefix}menu*!`)
+                  reply(`*${pushname}*, bakaaaa! itukan ga ada Di Dalam *${prefix}menu*!`)
 
                   }
 			if (isGroup && !isCmd && isSimi && budy != undefined) {
